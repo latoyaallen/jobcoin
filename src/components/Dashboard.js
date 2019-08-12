@@ -20,7 +20,11 @@ const Dashboard = (props) => (
           userName={props.userName}
           balance={props.balance}
         /></div>
-    <div style={column}><HistoryGraph /></div>
+    <div style={column}>
+      <HistoryGraph
+        userName={props.userName}
+      />
+    </div>
   </div>
 </div>
 )
