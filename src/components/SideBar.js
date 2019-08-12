@@ -7,9 +7,12 @@ const sidebarContainer = {
   width: '33%',
 }
 
-const SideBar = () => (
+const SideBar = (props) => (
   <div style={sidebarContainer}>
-    <Balance />
+    <Balance
+      userName={props.userName}
+      balance={props.balance}
+    />
     <Send />
   </div>
 )

@@ -18,11 +18,12 @@ const line = {
   width: '100%',
 }
 
-const Balance = () => (
+const Balance = (props) => (
   <div style={balanceContainer}>
     {balanceText}
     <div style={line}></div>
-    {balance}
+    <div>{props.userName}</div>
+    {props.balance}
   </div>
 )
 

@@ -12,27 +12,21 @@ const cardContainer = {
   textAlign: 'center',
 }
 
-const line = {
-  borderTop: '1px solid #ced0d9',
-  height: '15%',
-  width: '100%',
-}
-
 class SignIn extends React.Component {
   constructor(props) {
     super(props);
+    console.log(props);
   }
+
 
   render() {
     return (
-      <form style={cardContainer} >
-        <label>
-          {welcomeText}
-          <div style={line}></div>
+      <div>
+        <form style={cardContainer} onSubmit={this.props.handleSubmit}>
           <input type="text" />
-        </label>
-        <button onClick={this.props.handleSubmit}>{signInText}</button>
-      </form>
+          <button>{welcomeText}</button>
+        </form>
+      </div>
     );
   }
 }

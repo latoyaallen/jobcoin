@@ -15,10 +15,14 @@ const Dashboard = (props) => (
   <div>
     <Header handleSubmit={props.handleSubmit} />
     <div style={row}>
-      <div style={column}><SideBar /></div>
+      <div style={column}>
+        <SideBar
+          userName={props.userName}
+          balance={props.balance}
+        /></div>
     <div style={column}><HistoryGraph /></div>
-    </div>
   </div>
+</div>
 )
 
 export default Dashboard;
